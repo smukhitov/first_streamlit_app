@@ -6,5 +6,6 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 st.title("Healthy App!")
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-st.multiselect("Choose some fruits: ", list(my_fruit_list.index))
-st.dataframe(my_fruit_list)
+fruits_selected = st.multiselect("Choose some fruits: ", list(my_fruit_list.index), ['Avocado', 'Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+st.dataframe(fruits_to_show)
