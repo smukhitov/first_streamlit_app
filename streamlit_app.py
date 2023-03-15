@@ -1,3 +1,6 @@
-import streamlit
+import streamlit as st
 
-streamlit.title("Hello from my App!")
+st.title("Hello from my App!")
+st.header("Breakfast menu")
+
+st.text("BS")
